@@ -1,0 +1,34 @@
+
+
+<div>
+<h1>USUARIOS</h1>
+
+
+<%= link_to "Agregar", new_users_path() %>
+
+<table>
+  <tr>
+<thead>
+  <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Document</th>
+    <th>Phone</th>
+</thead>
+    </tr>
+<tr>
+<% @users.each do |usr| %>
+    <td><%= usr.name %></td>
+    <td><%= usr.surname %></td>
+    <td><%= usr.document %></td>
+    <td><%= usr.phone %></td>
+<td>
+    <%= link_to "Editar", edit_users_path(usr) %>
+    <%= link_to "Eliminar", destroy_users_path(usr), method: :delete, data: { confirm: '¿Está seguro de eliminar?'} %></td>
+</tr>
+<% end %>
+
+</table>
+
+        
+
+</div>

@@ -1,0 +1,26 @@
+
+#<link href="app\assets\stylesheets\application.css" rel="stylesheet">
+
+
+<%= form_for @users do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+    <div>
+        <%= f.label :surname %>
+        <%= f.text_field :surname %>
+    </div>
+    <div>
+        <%= f.label :document %>
+        <%= f.text_field :document %>
+    </div>
+    <div>
+        <%= f.label :phone %>
+        <%= f.text_field :phone %>
+    </div>
+    <div>
+        <%= f.submit %>
+        <p><%= link_to "Volver", index_users_path() %></p>
+    </div>
+    <% end %>
